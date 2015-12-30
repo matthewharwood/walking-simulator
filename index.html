@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Hello Phaser</title>
+  <link rel="stylesheet" href="styles/app.css" type="text/css" />
+  <script src="node_modules/phaser/build/phaser.js"></script>
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <!--<script src="GameObjects/MyScene.js"></script>-->
+  <!--<script src="GameObjects/Player.js"></script>-->
+  <script src="app/scenes/TitleScreenState.js"></script>
+  <!--<script src="States/GamePlayState.js"></script>-->
+  <!--<script src="States/GameOverState.js"></script>-->
+  <script>
+    System.config({
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System.import('app/boot')
+        .then(null, console.error.bind(console));
+  </script>
+</head>
+<body>
+<my-app>Loading...</my-app>
+<div id="content"></div>
+</body>
+</html>
